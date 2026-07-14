@@ -79,3 +79,25 @@ Server starts at `http://localhost:5000`.
 | DELETE | `/api/spots/:id` | Protected | Delete own spot (or any spot, if admin) |
 | POST | `/api/spots/:id/reviews` | Protected | Add a review to a spot |
 
+## Project Structure
+src/
+config/       — MongoDB connection (singleton)
+models/       — TypeScript interfaces for User, Spot
+controllers/  — Route handler logic
+routes/       — Express route definitions
+middleware/   — Auth (JWT verification), error handling
+utils/        — Password hashing, token generation, validation
+seed/         — Database seed script
+
+## Scripts
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server with hot reload |
+| `npm run build` | Compile TypeScript to `dist/` |
+| `npm start` | Run compiled production build |
+| `npm run seed` | Seed database with demo data |
+
+## Notes
+
+- Uses the native MongoDB driver directly (no Mongoose) — data shape is enforced via TypeScript interfaces and manual validation, not a schema layer.
+- Passwords are hashed with bcrypt before storage; plaintext passwords are never stored or logged.
