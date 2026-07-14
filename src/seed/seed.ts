@@ -50,7 +50,9 @@ const run = async () => {
       fullDescription:
         "An incomplete 17th-century Mughal fort complex started by Prince Muhammad Azam in 1678. Home to the tomb of Pari Bibi, a mosque, and manicured gardens — a surprisingly peaceful escape from the chaos of Old Dhaka's streets.",
       category: "Heritage",
-      images: ["https://source.unsplash.com/800x600/?mughal,fort"],
+      images: [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkL0NUokbGGzELyJG9k2U1yTOwH-WTD4k4Z1VW7FVbN6mJodDcoL3f-NYBOLWdB9p5NJ6GFGB-P-Ei7twuR9lYahJtEiNqdu8LOLOTyyELyIHs6qCZgaZPKqSaJVyCcCdZ-iaWR=s1360-w1360-h1020-rw",
+      ],
       location: "Old Dhaka",
       entryFee: 20,
       bestTimeToVisit: "Early morning or late afternoon",
@@ -67,7 +69,9 @@ const run = async () => {
       fullDescription:
         "A ghost street of crumbling 19th-century merchant mansions in Sonargaon, once home to wealthy Hindu textile traders. The decayed facades and overgrown vines make it one of the most photogenic and eerie heritage sites near Dhaka.",
       category: "Heritage",
-      images: ["https://source.unsplash.com/800x600/?abandoned,mansion"],
+      images: [
+        "https://www.travelandexplorebd.com/storage/app/public/posts/February2020/z0TbcvpN8iPkm4LZEcI9.jpg",
+      ],
       location: "Sonargaon, Narayanganj",
       entryFee: 0,
       bestTimeToVisit: "Winter mornings (Nov-Feb)",
@@ -84,7 +88,9 @@ const run = async () => {
       fullDescription:
         "A rooftop cafe overlooking Hatirjheel lake, where the city's skyline reflects off the water as the sun sets behind the bridges. Popular with photographers but still uncrowded on weekday evenings.",
       category: "Rooftop",
-      images: ["https://source.unsplash.com/800x600/?rooftop,sunset,city"],
+      images: [
+        "https://www.shutterstock.com/shutterstock/videos/1105663209/thumb/1.jpg?ip=x480",
+      ],
       location: "Hatirjheel, Dhaka",
       entryFee: 0,
       bestTimeToVisit: "Sunset (5:30-6:30 PM)",
@@ -101,7 +107,9 @@ const run = async () => {
       fullDescription:
         "The former residence of the Nawab of Dhaka, this pink palace sits directly on the Buriganga River. Beyond the museum inside, the riverside steps are a quiet spot to watch cargo boats drift by at dusk.",
       category: "Heritage",
-      images: ["https://source.unsplash.com/800x600/?palace,river"],
+      images: [
+        "https://www.travelandexplorebd.com/storage/app/public/posts/April2020/pink%20palace%204.jpg",
+      ],
       location: "Kumartuli, Old Dhaka",
       entryFee: 100,
       bestTimeToVisit: "Late afternoon",
@@ -118,7 +126,9 @@ const run = async () => {
       fullDescription:
         "A rarely-visited wetland area near Uttara where seasonal water bodies attract migratory birds in winter. A narrow dirt trail winds through paddy fields — bring water, there's no shade for most of the walk.",
       category: "Park",
-      images: ["https://source.unsplash.com/800x600/?wetland,birds"],
+      images: [
+        "https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2025/10/11/20240415_rajibdhar_9004_0.jpg",
+      ],
       location: "Diabari, Uttara",
       entryFee: 0,
       bestTimeToVisit: "Winter (Dec-Feb) for migratory birds",
@@ -135,7 +145,9 @@ const run = async () => {
       fullDescription:
         "An unmarked alley off Chawkbazar packed with third-generation food stalls serving haleem, jilapi, and bakarkhani. Locals know it as the place to eat during Ramadan, but it runs year-round after sunset.",
       category: "Street Food",
-      images: ["https://source.unsplash.com/800x600/?street,food,market"],
+      images: [
+        "https://www.bssnews.net/assets/news_photos/2026/03/16/image-369382-1773657700.jpg",
+      ],
       location: "Chawkbazar, Old Dhaka",
       entryFee: 0,
       bestTimeToVisit: "Evening, after 6 PM",
@@ -152,7 +164,9 @@ const run = async () => {
       fullDescription:
         "A 111-year-old botanical garden hidden behind unassuming walls in Old Dhaka, home to rare cacti, orchids, and a small lake. Most Dhaka residents have never been inside despite passing it daily.",
       category: "Park",
-      images: ["https://source.unsplash.com/800x600/?botanical,garden"],
+      images: [
+        "https://media-cdn.tripadvisor.com/media/photo-s/0e/90/b3/fb/baldha-gardens.jpg",
+      ],
       location: "Wari, Old Dhaka",
       entryFee: 10,
       bestTimeToVisit: "Morning (10 AM - 12 PM)",
@@ -169,7 +183,9 @@ const run = async () => {
       fullDescription:
         "A tiny two-floor cafe tucked into a residential alley, filled floor-to-ceiling with secondhand books you can read while you order. No sign on the main road — you have to know the alley to find it.",
       category: "Cafe",
-      images: ["https://source.unsplash.com/800x600/?bookshop,cafe"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTutTuEtee1NuwM4SyfBLetwyyrwRVMTGIVhI6veqkOG26pU_Tk2-xIVvlF&s=10",
+      ],
       location: "Dhanmondi, Dhaka",
       entryFee: 0,
       bestTimeToVisit: "Weekday afternoons (quieter)",
@@ -187,7 +203,9 @@ const run = async () => {
       fullDescription:
         "A shaded 2km walking loop around a lake inside Jahangirnagar University's campus, known for its guest-friendly atmosphere and seasonal migratory birds. Bicycles can be rented at the main gate.",
       category: "Lake",
-      images: ["https://source.unsplash.com/800x600/?lake,trail,trees"],
+      images: [
+        "https://www.thedailystar.net/sites/default/files/styles/big_1/public/images/2025/02/10/birds2.jpg",
+      ],
       location: "Savar, Dhaka",
       entryFee: 0,
       bestTimeToVisit: "Early morning",
@@ -204,7 +222,9 @@ const run = async () => {
       fullDescription:
         "A small mosque in Old Dhaka covered floor-to-dome in star-motif mosaic tiles, some original from the 18th century, others added during a Japanese-funded 1980s restoration using broken china plates.",
       category: "Heritage",
-      images: ["https://source.unsplash.com/800x600/?mosaic,mosque"],
+      images: [
+        "https://www.thedailystar.net/sites/default/files/styles/big_1/public/news/images/star_mosque_01.jpg?h=764e4cd4"
+      ],
       location: "Armanitola, Old Dhaka",
       entryFee: 0,
       bestTimeToVisit: "Mid-morning, outside prayer times",
