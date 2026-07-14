@@ -80,14 +80,16 @@ Server starts at `http://localhost:5000`.
 | POST | `/api/spots/:id/reviews` | Protected | Add a review to a spot |
 
 ## Project Structure
+```
 src/
-config/       — MongoDB connection (singleton)
-models/       — TypeScript interfaces for User, Spot
-controllers/  — Route handler logic
-routes/       — Express route definitions
-middleware/   — Auth (JWT verification), error handling
-utils/        — Password hashing, token generation, validation
-seed/         — Database seed script
+  config/       — MongoDB connection (singleton)
+  models/       — TypeScript interfaces for User, Spot
+  controllers/  — Route handler logic
+  routes/       — Express route definitions
+  middleware/   — Auth (JWT verification), error handling
+  utils/        — Password hashing, token generation, validation
+  seed/         — Database seed script
+```
 
 ## Scripts
 | Command | Description |
