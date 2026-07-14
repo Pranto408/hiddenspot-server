@@ -59,12 +59,10 @@ export const getSpots = async (req: Request, res: Response): Promise<void> => {
       totalPages: Math.ceil(total / SPOTS_PER_PAGE),
     });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Failed to fetch spots",
-        error: (error as Error).message,
-      });
+    res.status(500).json({
+      message: "Failed to fetch spots",
+      error: (error as Error).message,
+    });
   }
 };
 
@@ -74,14 +72,15 @@ export const getSpotById = async (
   res: Response,
 ): Promise<void> => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
+    const id = req.params.id as string;
+    if (!ObjectId.isValid(id)) {
       res.status(400).json({ message: "Invalid spot id" });
       return;
     }
     const db = getDB();
     const spot = await db
       .collection<Spot>("spots")
-      .findOne({ _id: new ObjectId(req.params.id) });
+      .findOne({ _id: new ObjectId(id) });
 
     if (!spot) {
       res.status(404).json({ message: "Spot not found" });
@@ -97,12 +96,10 @@ export const getSpotById = async (
 
     res.status(200).json({ spot, related });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Failed to fetch spot",
-        error: (error as Error).message,
-      });
+    res.status(500).json({
+      message: "Failed to fetch spot",
+      error: (error as Error).message,
+    });
   }
 };
 
@@ -145,12 +142,10 @@ export const createSpot = async (
 
     res.status(201).json(newSpot);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Failed to create spot",
-        error: (error as Error).message,
-      });
+    res.status(500).json({
+      message: "Failed to create spot",
+      error: (error as Error).message,
+    });
   }
 };
 
@@ -173,12 +168,10 @@ export const getMySpots = async (
 
     res.status(200).json(spots);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Failed to fetch your spots",
-        error: (error as Error).message,
-      });
+    res.status(500).json({
+      message: "Failed to fetch your spots",
+      error: (error as Error).message,
+    });
   }
 };
 
@@ -188,7 +181,8 @@ export const deleteSpot = async (
   res: Response,
 ): Promise<void> => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
+    const id = req.params.id as string;
+    if (!ObjectId.isValid(id)) {
       res.status(400).json({ message: "Invalid spot id" });
       return;
     }
@@ -199,7 +193,7 @@ export const deleteSpot = async (
 
     const db = getDB();
     const spots = db.collection<Spot>("spots");
-    const spot = await spots.findOne({ _id: new ObjectId(req.params.id) });
+    const spot = await spots.findOne({ _id: new ObjectId(id) });
 
     if (!spot) {
       res.status(404).json({ message: "Spot not found" });
@@ -213,12 +207,10 @@ export const deleteSpot = async (
     await spots.deleteOne({ _id: spot._id });
     res.status(200).json({ message: "Spot deleted successfully" });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Failed to delete spot",
-        error: (error as Error).message,
-      });
+    res.status(500).json({
+      message: "Failed to delete spot",
+      error: (error as Error).message,
+    });
   }
 };
 
@@ -228,7 +220,8 @@ export const addReview = async (
   res: Response,
 ): Promise<void> => {
   try {
-    if (!ObjectId.isValid(req.params.id)) {
+    const id = req.params.id as string;
+    if (!ObjectId.isValid(id)) {
       res.status(400).json({ message: "Invalid spot id" });
       return;
     }
@@ -247,7 +240,7 @@ export const addReview = async (
 
     const db = getDB();
     const spots = db.collection<Spot>("spots");
-    const spot = await spots.findOne({ _id: new ObjectId(req.params.id) });
+    const spot = await spots.findOne({ _id: new ObjectId(id) });
 
     if (!spot) {
       res.status(404).json({ message: "Spot not found" });
@@ -274,11 +267,9 @@ export const addReview = async (
 
     res.status(201).json({ message: "Review added", averageRating });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Failed to add review",
-        error: (error as Error).message,
-      });
+    res.status(500).json({
+      message: "Failed to add review",
+      error: (error as Error).message,
+    });
   }
 };

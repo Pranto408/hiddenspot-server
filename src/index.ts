@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db";
 import authRoutes from "./routes/authRoutes";
 import spotRoutes from "./routes/spotRoutes";
+import { notFound, errorHandler } from "./middleware/errorHandler";
 
 dotenv.config();
 
@@ -18,6 +19,9 @@ app.get("/api/health", (req: Request, res: Response) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/spots", spotRoutes);
+
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
