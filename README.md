@@ -79,4 +79,3 @@ Server starts at `http://localhost:5000`.
 | DELETE | `/api/spots/:id` | Protected | Delete own spot (or any spot, if admin) |
 | POST | `/api/spots/:id/reviews` | Protected | Add a review to a spot |
 
-## Project Structure
